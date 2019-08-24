@@ -7,7 +7,6 @@ def getfoldersizes(rootDir):
     return sorted_dir_size
 
 
-
 def gettopdir(dirpath, num):
     dir_list = getfoldersizes(dirpath)
     return dir_list[:num]
@@ -24,13 +23,11 @@ def print_header(msg,border):
 def printout(list_object):
     print_header("Directory listing by size", "=")
     for x,y in list_object:
-        print(x,y)
-
+        print('{} \t{}'.format(x,y))
 
 
 def main():
-   # rootpath = "C:\Scripts"
-   if len(sys.argv) >= 2:
+    if len(sys.argv) >= 2:
        dir_size = getfoldersizes(sys.argv[1])
        printout(dir_size)
 
