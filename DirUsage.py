@@ -83,7 +83,7 @@ def main():
         num = sys.argv[2]
         try:
            n = int(num)
-        except TypeError:
+        except ValueError:
             print('Unable to covert to Int. second argument must be an integer')
         else:
             dir_size = gettopdir(path, n)
